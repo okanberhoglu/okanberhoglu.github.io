@@ -8,13 +8,28 @@ const rightArrow = document.querySelector(".proj-arrow-right");
 function getVisibleCount() {
   const vw = document.querySelector(".projects-viewport");
   if (!vw) return 3;
-  const cardW = 260 + 24; // width + gap
-  return Math.max(1, Math.floor(vw.clientWidth / cardW));
+  return Math.max(1, Math.floor(vw.clientWidth / getSlideStep()));
+}
+
+function getSlideStep() {
+  const firstCard = cards[0];
+  if (!firstCard || !track) return 284;
+
+  const trackStyle = window.getComputedStyle(track);
+  const gap = parseFloat(trackStyle.columnGap || trackStyle.gap) || 0;
+  return firstCard.getBoundingClientRect().width + gap;
+}
+
+function clampProjectIndex() {
+  const max = Math.max(0, cards.length - getVisibleCount());
+  projIndex = Math.max(0, Math.min(projIndex, max));
 }
 
 function updateSlider() {
-  const cardW = 260 + 24;
-  track.style.transform = `translateX(-${projIndex * cardW}px)`;
+  if (!track) return;
+
+  clampProjectIndex();
+  track.style.transform = `translateX(-${projIndex * getSlideStep()}px)`;
   dots.forEach((d, i) => d.classList.toggle("active", i === projIndex));
   if (leftArrow) leftArrow.disabled = projIndex === 0;
   if (rightArrow)

@@ -852,6 +852,76 @@ a {
   border-radius: 4px;
 }
 
+@media (max-width: 600px) {
+  #projects .section-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .projects-wrapper {
+    display: block;
+  }
+  .projects-viewport {
+    width: 100%;
+    padding: 16px 0;
+    margin: -16px 0;
+  }
+  .projects-track {
+    gap: 16px;
+    padding: 4px 0;
+  }
+  .proj-card {
+    width: min(100%, 320px);
+    height: 340px;
+  }
+  .proj-card-inner {
+    border-radius: 16px;
+  }
+  .proj-card-img-placeholder {
+    flex: 0 0 150px;
+  }
+  .proj-icon {
+    font-size: 44px;
+  }
+  .proj-card-body {
+    padding: 18px;
+  }
+  .proj-title {
+    font-size: 16px;
+  }
+  .proj-desc {
+    font-size: 12px;
+  }
+  .proj-hover-cta {
+    opacity: 1;
+    transform: none;
+    padding: 12px;
+    background: linear-gradient(
+      to top,
+      rgba(89, 130, 235, 0.2) 0%,
+      transparent 100%
+    );
+  }
+  .proj-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    transform: translateY(-50%);
+    background: rgba(10, 15, 30, 0.82);
+    backdrop-filter: blur(10px);
+  }
+  .proj-arrow-left {
+    left: -6px;
+  }
+  .proj-arrow-right {
+    right: -6px;
+  }
+  .proj-dots {
+    margin-top: 22px;
+  }
+}
+
 /* =============================================
        EDUCATION SECTION
     ============================================= */
@@ -1349,6 +1419,31 @@ footer {
 .footer-copy {
   font-size: 12px;
   color: rgba(136, 153, 187, 0.5);
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 36px 20px;
+  }
+  .footer-name {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+  .footer-links a {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .footer-copy {
+    max-width: 280px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
 }
 
 /* =============================================
