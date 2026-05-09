@@ -4,10 +4,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let spots = [];
 const mouse = { x: undefined, y: undefined };
-window.addEventListener("mousemove", function (event) {
+const homeSection = document.getElementById("home");
+homeSection.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
-  spots.push(new Particle());
+  for (let i = 0; i < 3; i++) spots.push(new Particle());
 });
 class Particle {
   constructor() {
@@ -61,8 +62,9 @@ window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
-window.addEventListener("mouseout", () => {
+homeSection.addEventListener("mouseleave", () => {
   mouse.x = undefined;
   mouse.y = undefined;
+  spots = [];
 });
 animateTrail();

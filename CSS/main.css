@@ -484,12 +484,12 @@ a {
   padding: 100px 40px;
 }
 .section-tag {
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -650,7 +650,7 @@ a {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 14px 16px;
-  width: 140px;
+  width: 180px;
   height: 80px;
   cursor: default;
   transition: all 0.3s ease;
@@ -659,7 +659,7 @@ a {
   background-color: #ffffff;
 }
 .skill-chip span {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 500;
   color: #000000;
   white-space: nowrap;
@@ -675,6 +675,396 @@ a {
   width: 50px;
   height: 50px;
   object-fit: contain;
+}
+
+/* =============================================
+       PROJECTS SECTION
+    ============================================= */
+#projects {
+  background: var(--navy-2);
+}
+
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.projects-viewport {
+  flex: 1;
+  overflow: hidden;
+  padding: 20px 4px;
+  margin: -20px -4px;
+}
+.projects-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  padding: 4px 2px;
+}
+.proj-card {
+  flex-shrink: 0;
+  width: 260px;
+  height: 380px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.proj-card-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.15s ease;
+  will-change: transform;
+  transform-origin: center center;
+}
+.proj-card:hover .proj-card-inner {
+  border-color: rgba(89, 130, 235, 0.5);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(89, 130, 235, 0.15);
+}
+.proj-card-img-placeholder {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(89, 130, 235, 0.12) 0%,
+    rgba(40, 65, 180, 0.08) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.proj-icon {
+  font-size: 56px;
+  filter: drop-shadow(0 4px 12px rgba(89, 130, 235, 0.3));
+  transition: transform 0.3s ease;
+}
+.proj-card:hover .proj-icon {
+  transform: scale(1.15) translateY(-4px);
+}
+.proj-card-body {
+  padding: 20px;
+  flex-shrink: 0;
+}
+.proj-tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.proj-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.proj-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.proj-hover-cta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(89, 130, 235, 0.22) 0%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-light);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+  letter-spacing: 0.04em;
+}
+.proj-card:hover .proj-hover-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+.proj-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.proj-arrow:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+.proj-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.proj-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.proj-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.proj-dot.active {
+  background: var(--accent);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* =============================================
+       EDUCATION SECTION
+    ============================================= */
+#education {
+  background: var(--navy);
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.edu-card-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.edu-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover .edu-icon {
+  border-color: var(--accent);
+  background: rgba(89, 130, 235, 0.12);
+  box-shadow: 0 0 20px rgba(89, 130, 235, 0.2);
+}
+
+.edu-line {
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(
+    to right,
+    var(--accent),
+    rgba(89, 130, 235, 0.15)
+  );
+  border-radius: 1px;
+}
+
+.edu-card-right {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px 28px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-card-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.edu-card:hover .edu-card-right {
+  background: var(--surface-hover);
+  border-color: rgba(89, 130, 235, 0.3);
+  transform: translateY(-4px);
+}
+
+.edu-card:hover .edu-card-right::before {
+  opacity: 1;
+}
+
+.edu-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.edu-badge-done {
+  color: var(--text-muted);
+  background: rgba(136, 153, 187, 0.08);
+  border-color: rgba(136, 153, 187, 0.2);
+}
+
+.edu-degree {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.edu-field {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.edu-school {
+  font-size: 15px;
+  font-weight: 400;
+  color: #aabbd4;
+  margin-bottom: 12px;
+}
+
+.edu-second {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.edu-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.edu-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-tags span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent-light);
+  background: rgba(89, 130, 235, 0.1);
+  border: 1px solid rgba(89, 130, 235, 0.2);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+@media (max-width: 900px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .edu-card {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .edu-card-left {
+    flex-direction: column;
+    align-items: center;
+    width: 36px;
+  }
+  .edu-line {
+    width: 2px;
+    height: auto;
+    flex: 1;
+    min-height: 32px;
+    background: linear-gradient(
+      to bottom,
+      var(--accent),
+      rgba(89, 130, 235, 0.1)
+    );
+  }
+  .edu-card-right {
+    margin-bottom: 20px;
+  }
+  .edu-card:hover .edu-card-right {
+    transform: translateX(4px);
+  }
+  .edu-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  .edu-field {
+    font-size: 18px;
+  }
+  .edu-card-right {
+    padding: 16px 18px;
+  }
 }
 
 /*----------------------------------------------- Experiences ------------------------------*/

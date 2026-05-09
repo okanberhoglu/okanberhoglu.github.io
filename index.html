@@ -276,6 +276,187 @@
         </div>
       </div>
     </section>
+     <section id="projects">
+      <div class="section-inner">
+        <div class="section-tag reveal">Projects</div>
+        <div class="projects-wrapper reveal">
+          <button class="proj-arrow proj-arrow-left" onclick="slideProjects(-1)" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="projects-viewport">
+            <div class="projects-track" id="projectsTrack">
+
+              <div class="proj-card" data-title="Gimbal">
+                <div class="proj-card-inner">
+                  <div class="proj-card-img-placeholder">
+                    <span class="proj-icon">🎯</span>
+                  </div>
+                  <div class="proj-card-body">
+                    <div class="proj-tag">Mechanical · Electronics</div>
+                    <h3 class="proj-title">Gimbal</h3>
+                    <p class="proj-desc">Details coming soon.</p>
+                  </div>
+                  <div class="proj-hover-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Click for details
+                  </div>
+                </div>
+              </div>
+
+              <div class="proj-card" data-title="3D Topology Optimization">
+                <div class="proj-card-inner">
+                  <div class="proj-card-img-placeholder">
+                    <span class="proj-icon">🔷</span>
+                  </div>
+                  <div class="proj-card-body">
+                    <div class="proj-tag">Simulation · CAD</div>
+                    <h3 class="proj-title">3D Topology Optimization</h3>
+                    <p class="proj-desc">Details coming soon.</p>
+                  </div>
+                  <div class="proj-hover-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Click for details
+                  </div>
+                </div>
+              </div>
+
+              <div class="proj-card" data-title="Robotics Projects">
+                <div class="proj-card-inner">
+                  <div class="proj-card-img-placeholder">
+                    <span class="proj-icon">🤖</span>
+                  </div>
+                  <div class="proj-card-body">
+                    <div class="proj-tag">ROS2 · Autonomous</div>
+                    <h3 class="proj-title">Robotics Projects</h3>
+                    <p class="proj-desc">Details coming soon.</p>
+                  </div>
+                  <div class="proj-hover-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Click for details
+                  </div>
+                </div>
+              </div>
+
+              <div class="proj-card" data-title="Backend Projects">
+                <div class="proj-card-inner">
+                  <div class="proj-card-img-placeholder">
+                    <span class="proj-icon">⚙️</span>
+                  </div>
+                  <div class="proj-card-body">
+                    <div class="proj-tag">API · Systems</div>
+                    <h3 class="proj-title">Backend Projects</h3>
+                    <p class="proj-desc">Details coming soon.</p>
+                  </div>
+                  <div class="proj-hover-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Click for details
+                  </div>
+                </div>
+              </div>
+
+              <div class="proj-card" data-title="IoT Projects">
+                <div class="proj-card-inner">
+                  <div class="proj-card-img-placeholder">
+                    <span class="proj-icon">📡</span>
+                  </div>
+                  <div class="proj-card-body">
+                    <div class="proj-tag">Embedded · IoT</div>
+                    <h3 class="proj-title">IoT Projects</h3>
+                    <p class="proj-desc">Details coming soon.</p>
+                  </div>
+                  <div class="proj-hover-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    Click for details
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="proj-arrow proj-arrow-right" onclick="slideProjects(1)" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="proj-dots" id="projDots">
+          <span class="proj-dot active" onclick="goToProject(0)"></span>
+          <span class="proj-dot" onclick="goToProject(1)"></span>
+          <span class="proj-dot" onclick="goToProject(2)"></span>
+          <span class="proj-dot" onclick="goToProject(3)"></span>
+          <span class="proj-dot" onclick="goToProject(4)"></span>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education">
+      <div class="section-inner">
+        <div class="section-tag reveal">Education</div>
+
+        <div class="edu-grid">
+
+          <div class="edu-card reveal">
+            <div class="edu-card-left">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-line"></div>
+            </div>
+            <div class="edu-card-right">
+              <div class="edu-badge">Current</div>
+              <div class="edu-degree">Master of Science</div>
+              <div class="edu-field">Robotics</div>
+              <div class="edu-school">Middle East Technical University</div>
+              <div class="edu-date">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2024 — Present
+              </div>
+              <div class="edu-tags">
+                <span>ROS2</span><span>Autonomous Systems</span><span>Computer Vision</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-card-left">
+              <div class="edu-icon">⚙️</div>
+              <div class="edu-line"></div>
+            </div>
+            <div class="edu-card-right">
+              <div class="edu-badge edu-badge-done">Completed</div>
+              <div class="edu-degree">Bachelor of Science</div>
+              <div class="edu-field">Mechanical Engineering</div>
+              <div class="edu-school">TOBB Economics and Technology University</div>
+              <div class="edu-date">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2018 — 2023
+              </div>
+              <div class="edu-tags">
+                <span>Thermodynamics</span><span>System Dynamics</span><span>CAD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="edu-card reveal">
+            <div class="edu-card-left">
+              <div class="edu-icon">💻</div>
+            </div>
+            <div class="edu-card-right">
+              <div class="edu-badge edu-badge-done">Completed</div>
+              <div class="edu-degree">Associate Degree</div>
+              <div class="edu-field">Computer Programming</div>
+              <div class="edu-school">Atatürk University <span class="edu-second">(Second Degree)</span></div>
+              <div class="edu-date">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                2021 — 2023
+              </div>
+              <div class="edu-tags">
+                <span>Java</span><span>Algorithms</span><span>Databases</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
       <section id="experiences">
         <div class="experiences">
           <span class="experienceCaption">
@@ -417,6 +598,7 @@
     <script src="./JS/letterHover.js"></script>
     <script src="./JS/reveal.js"></script>
     <script src="./JS/menuOpen.js"></script>
+    <script src="./JS/projectsAnim.js"></script>
     <script type="module" src="./JS/threeMain.js"></script>
   </body>
 </html>
