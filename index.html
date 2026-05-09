@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,112 +22,211 @@
     <script type="importmap">
       {
         "imports": {
-          "three": "./JS/three/build/three.module.js"
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
         }
       }
     </script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <div class="wrapper">
-          <div class="right">
-            <div class="hamburger" onclick="menuOpen()">
-              <span className="line1"></span>
-              <span className="line2"></span>
-              <span className="line3"></span>
-            </div>
-          </div>
-        </div>
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
+        <span
+          >Available for work
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 13s1.5 2 4 2 4-2 4-2" />
+            <line x1="9" y1="9" x2="9.01" y2="9" />
+            <line x1="15" y1="9" x2="15.01" y2="9" />
+          </svg>
+          okanberh@gmail.com</span
+        >
       </div>
-    </header>
-    <section id="menu">
-      <div class="menu">
-        <ul>
-          <li onclick="menuOpen()">
-            <a href="#home">Home</a>
-          </li>
-          <li onclick="menuOpen()">
-            <a href="#aboutMe">About Me</a>
-          </li>
-          <li onclick="menuOpen()">
-            <a href="#skills">Skills</a>
-          </li>
-          <li onclick="menuOpen()">
-            <a href="#experiences">Experiences</a>
-          </li>
-          <!--<li onclick="menuOpen()">
-            <a href="#projects">Projects</a>
-          </li> -->
-        </ul>
+    </div>
+
+    <!-- MOBILE NAV -->
+    <div class="navbar">
+      <div class="hamburger" onclick="menuOpen()">
+        <span></span><span></span><span></span>
       </div>
-    </section>
-    <div class="sections">
-      <section id="home">
-        <div class="home">
-          <canvas id="canvas"></canvas>
-          <div class="hello">
-            <h1 class="alpha">H</h1>
-            <h1 class="alpha">e</h1>
-            <h1 class="alpha">l</h1>
-            <h1 class="alpha">l</h1>
-            <h1 class="alpha">o</h1>
-            <h1 class="alpha">,</h1>
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li onclick="menuOpen()"><a href="#home">Home</a></li>
+        <li onclick="menuOpen()"><a href="#aboutMe">About Me</a></li>
+        <li onclick="menuOpen()"><a href="#skills">Skills</a></li>
+        <li onclick="menuOpen()"><a href="#experiences">Experience</a></li>
+      </ul>
+    </div>
+
+     <!-- ==================== HOME ==================== -->
+    <section id="home">
+      <canvas id="blobCanvas"></canvas>
+      <canvas id="canvas"></canvas>
+      <div class="home-inner home">
+        <div class="home-left">
+
+          <div class="hello fade-in">
+            <h1 class="alpha">H</h1><h1 class="alpha">e</h1><h1 class="alpha">l</h1>
+            <h1 class="alpha">l</h1><h1 class="alpha">o</h1><h1 class="alpha">,</h1>
             <span class="Iam">
-              <h1 class="alpha">I</h1>
-              <h1 class="alpha">'</h1>
-              <h1 class="alpha">m</h1>
+              <h1 class="alpha">I</h1><h1 class="alpha">'</h1><h1 class="alpha">m</h1>
             </span>
           </div>
-          <br />
-          <div class="nameBox">
+
+          <div class="nameBox fade-in">
             <span class="name">
-              <h1 class="alpha">O</h1>
-              <h1 class="alpha">K</h1>
-              <h1 class="alpha">A</h1>
-              <h1 class="alpha">N</h1>
+              <h1 class="alpha">O</h1><h1 class="alpha">K</h1>
+              <h1 class="alpha">A</h1><h1 class="alpha">N</h1>
             </span>
             <span class="lastName">
-              <h1 class="alpha">B</h1>
-              <h1 class="alpha">E</h1>
-              <h1 class="alpha">R</h1>
-              <h1 class="alpha">H</h1>
-              <h1 class="alpha">O</h1>
-              <h1 class="alpha">Ğ</h1>
-              <h1 class="alpha">L</h1>
-              <h1 class="alpha">U</h1>
+              <h1 class="alpha">B</h1><h1 class="alpha">E</h1><h1 class="alpha">R</h1>
+              <h1 class="alpha">H</h1><h1 class="alpha">O</h1><h1 class="alpha">Ğ</h1>
+              <h1 class="alpha">L</h1><h1 class="alpha">U</h1>
             </span>
           </div>
-          <div class="roleContainer">
+
+          <div class="roleContainer fade-in">
             <div class="roles">
               <div><div>Self-Taught Software Developer</div></div>
-              <div><div>R&D Engineer</div></div>
+              <div><div>Robotics Engineer</div></div>
+              <div><div>Self-Taught Software Developer</div></div>
             </div>
           </div>
-          <div class="getResumeButton">
-            <a
-              href="./assets/Resume_OkanBerhoglu.pdf"
-              download="Resume_OkanBerhoglu.pdf"
-            >
-              <button>Get Resume</button>
+
+          <div class="home-cta fade-in">
+            <a href="https://okanberhoglu.github.io/PortfolioWebsite/assets/Resume_OkanBerhoglu.pdf" target="_blank" rel="noopener">
+              <button class="btn-primary">Get Resume</button>
             </a>
           </div>
-          <div class="contactCard">
-            <div class="card">
-              <div class="email">
-                <img src="./assets/MailIcon.png" alt="E-Mail" />
-                <span>okanberh@gmail.com</span>
-              </div>
-              <div class="phone">
-                <img src="./assets/PhoneIcon.png" alt="Phone" />
-                <span>+90 535 063 70 01</span>
-              </div>
-            </div>
+
+          <div class="home-contacts fade-in">
+            <a class="contact-pill" href="mailto:okanberh@gmail.com">
+              <img src="https://okanberhoglu.github.io/PortfolioWebsite/assets/MailIcon.png" alt=""/>
+              okanberh@gmail.com
+            </a>
+            <a class="contact-pill" href="tel:+905350637001">
+              <img src="https://okanberhoglu.github.io/PortfolioWebsite/assets/PhoneIcon.png" alt=""/>
+              +90 535 063 70 01
+            </a>
           </div>
+
         </div>
-        <script src="./JS/mouseTrail.js"></script>
-      </section>
-      <section id="aboutMe">
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <section id="aboutMe">
         <div class="about">
           <div class="left">
             <div class="caption">
@@ -308,19 +407,25 @@
             <div class="certificates">
               <div
                 class="panel active"
-                style="background-image: url('./assets/JavaCertifica.png')"
+                style="
+                  background-image: url(&quot;./assets/JavaCertifica.png&quot;);
+                "
               >
                 <h3>Java</h3>
               </div>
               <div
                 class="panel"
-                style="background-image: url('./assets/CsharpHackerrank.jpg')"
+                style="
+                  background-image: url(&quot;./assets/CsharpHackerrank.jpg&quot;);
+                "
               >
                 <h3>C#</h3>
               </div>
               <div
                 class="panel"
-                style="background-image: url('./assets/IntroductionToML.jpg')"
+                style="
+                  background-image: url(&quot;./assets/IntroductionToML.jpg&quot;);
+                "
               >
                 <h3>Machine Learning</h3>
               </div>
@@ -328,14 +433,16 @@
               <div
                 class="panel"
                 style="
-                  background-image: url('./assets/PythonForDataScience.jpg');
+                  background-image: url(&quot;./assets/PythonForDataScience.jpg&quot;);
                 "
               >
                 <h3>Python</h3>
               </div>
               <div
                 class="panel"
-                style="background-image: url('./assets/MATLABOnramp.jpg')"
+                style="
+                  background-image: url(&quot;./assets/MATLABOnramp.jpg&quot;);
+                "
               >
                 <h3>Matlab</h3>
               </div>
@@ -480,6 +587,8 @@
         </div>
       </section> -->
     </div>
+    <script src="./JS/mouseTrail.js"></script>
+    <script src="./JS/blobAnim.js"></script>
     <script src="./JS/letterHover.js"></script>
     <script src="./JS/menuOpen.js"></script>
     <script type="module" src="./JS/threeMain.js"></script>

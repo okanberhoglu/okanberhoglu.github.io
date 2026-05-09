@@ -3,20 +3,12 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let spots = [];
-
-const mouse = {
-  x: undefined,
-  y: undefined,
-};
-
-canvas.addEventListener("mousemove", function (event) {
+const mouse = { x: undefined, y: undefined };
+window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
-  for (let i = 0; i < 3; i++) {
-    spots.push(new Particle());
-  }
+  for (let i = 0; i < 3; i++) spots.push(new Particle());
 });
-
 class Particle {
   constructor() {
     this.x = mouse.x;
@@ -38,16 +30,14 @@ class Particle {
     ctx.fill();
   }
 }
-
 function handleParticle() {
   for (let i = 0; i < spots.length; i++) {
     spots[i].update();
     spots[i].draw();
     for (let j = i; j < spots.length; j++) {
-      const dx = spots[i].x - spots[j].x;
-      const dy = spots[i].y - spots[j].y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 90) {
+      const dx = spots[i].x - spots[j].x,
+        dy = spots[i].y - spots[j].y;
+      if (Math.sqrt(dx * dx + dy * dy) < 90) {
         ctx.beginPath();
         ctx.strokeStyle = spots[i].color;
         ctx.linewidth = spots[i].size / 80;
@@ -56,25 +46,23 @@ function handleParticle() {
         ctx.stroke();
       }
     }
-    let x = 1;
-    if (spots[i].size <= x) {
+    if (spots[i].size <= 1) {
       spots.splice(i, 1);
       i--;
     }
   }
 }
-
-function animate() {
+function animateTrail() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   handleParticle();
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animateTrail);
 }
-window.addEventListener("resize", function () {
+window.addEventListener("resize", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
-window.addEventListener("mouseout", function () {
+window.addEventListener("mouseout", () => {
   mouse.x = undefined;
   mouse.y = undefined;
 });
-animate();
+animateTrail();
