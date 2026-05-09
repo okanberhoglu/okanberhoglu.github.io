@@ -115,17 +115,18 @@ a {
   height: 3px;
   background: var(--accent);
   border-radius: 2px;
-  transform-origin: left;
-  transition: all 0.5s ease;
+  transform-origin: center;
+  transition: transform 0.35s ease, opacity 0.2s ease;
 }
 .navbar.active .hamburger span:first-child {
-  transform: rotate(45deg);
+  transform: translateY(10.5px) rotate(45deg);
 }
 .navbar.active .hamburger span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 .navbar.active .hamburger span:last-child {
-  transform: rotate(-45deg);
+  transform: translateY(-10.5px) rotate(-45deg);
 }
 @media (max-width: 965px) {
   .navbar {
