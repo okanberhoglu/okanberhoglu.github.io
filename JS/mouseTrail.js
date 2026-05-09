@@ -7,7 +7,7 @@ const mouse = { x: undefined, y: undefined };
 window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
-  for (let i = 0; i < 2; i++) spots.push(new Particle());
+  spots.push(new Particle());
 });
 class Particle {
   constructor() {
