@@ -324,15 +324,15 @@ a {
   font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 300;
   color: var(--accent-light);
+  animation: show 12s ease-in-out infinite;
+}
+.home .roleContainer .roles > div {
+  height: 48px;
 }
 .home .roleContainer .roles > div > div {
   height: 48px;
-  margin-bottom: 48px;
   display: flex;
   align-items: center;
-}
-.home .roleContainer .roles div:first-child {
-  animation: show 10s linear infinite;
 }
 
 /* CTA row */
@@ -1351,34 +1351,26 @@ a {
 
 @keyframes show {
   0% {
-    margin-top: -180px;
+    transform: translateY(0);
   }
 
-  5% {
-    margin-top: -90px;
+  24% {
+    transform: translateY(0);
   }
 
-  33% {
-    margin-top: -90px;
+  34% {
+    transform: translateY(-48px);
   }
 
-  38% {
-    margin-top: 0px;
+  58% {
+    transform: translateY(-48px);
   }
 
-  71% {
-    margin-top: 0px;
-  }
-
-  80% {
-    margin-top: 0px;
-  }
-
-  90% {
-    margin-top: 90px;
+  68% {
+    transform: translateY(-96px);
   }
 
   100% {
-    margin-top: 90px;
+    transform: translateY(-96px);
   }
 }
