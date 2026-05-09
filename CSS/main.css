@@ -603,181 +603,78 @@ a {
   }
 }
 
-/*----------------------------------------------- Skills ------------------------------*/
-
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+/* =============================================
+       SKILLS SECTION
+    ============================================= */
+#skills {
+  background: var(--navy);
 }
 
-.skills .caption {
-  flex: 2;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: row;
+.skills-ticker-wrap {
+  width: 100%;
   overflow: hidden;
-  margin-top: 62px;
-}
-
-.skills .caption .skillsCaption {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.skills .caption .certitifications {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-
-.skills .caption .and {
-  margin-left: 1em;
-  margin-right: 1em;
-  overflow: hidden;
-}
-
-.skills .caption h1 {
-  font-size: 60px;
-  cursor: context-menu;
-  transition: color 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-.skills .caption .animated {
-  color: #f66b0e;
-  animation: letterHoverAnimation 0.7s ease-in-out;
-}
-
-.skills .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 77%;
-  width: 80em;
-}
-
-.skills .content .card {
-  width: 24%;
-  height: 90%;
-  background-color: #e7f6f2;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-left: 1em;
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
-  box-shadow: -1em 1em 1em black;
-}
-
-.skills .content .card .skill {
-  transition: 0.3s all ease;
-  display: flex;
-  justify-content: space-around;
-}
-
-.skills .content .card .skill .right img {
-  width: 2.7em;
-  height: 2.7em;
-}
-
-.skills .content .card .skill .right .wide {
-  width: 4.5em;
-  height: 3.5em;
-}
-
-.skills .content .card .skill:hover {
-  transform: scale(1.1);
-}
-
-.skills .content .card .skill span {
-  font-size: 1.2em;
-}
-
-.skills .content .card .skill .level img {
-  width: 1.5em;
-  height: 1.5em;
-}
-
-.skills .content .certificates {
-  width: 70%;
-  height: 30em;
-  background-color: #3b4252;
-  border-radius: 20px;
-  display: flex;
-  box-shadow: -1em 1em 1em black;
-}
-
-.skills .content .certificates .panel {
-  background-size: auto 110%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 95%;
-  border-radius: 50px;
-  color: #fff;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
-  -webkit-transition: all 700ms ease-in;
+  padding: 12px 0;
 }
-
-.skills .content .certificates .panel h3 {
-  font-size: 24px;
-  color: black;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-  opacity: 0;
+.skills-ticker-track {
+  display: flex;
 }
-
-.skills .content .certificates .active {
-  flex: 5;
+.skills-ticker-row {
+  display: flex;
+  flex-shrink: 0;
+  gap: 14px;
+  animation: skills-scroll 25s linear infinite;
+  padding-right: 14px;
 }
-
-.skills .content .certificates .active h3 {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
+.skills-ticker-row:hover {
+  animation-play-state: paused;
 }
-
-@media only screen and (max-width: 1000px) {
-  .skills .content .card {
-    width: 30%;
+.skills-ticker-row:hover {
+  animation-play-state: paused;
+}
+@keyframes skills-scroll {
+  0% {
+    transform: translateX(0);
   }
-
-  .skills .content .certificates {
-    width: 65%;
+  100% {
+    transform: translateX(-50%);
   }
 }
-
-@media only screen and (max-width: 845px) {
-  .skills .content {
-    width: 95%;
-  }
+.skill-chip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  width: 140px;
+  height: 80px;
+  cursor: default;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  font-size: 22px;
+  background-color: #ffffff;
 }
-
-@media only screen and (max-width: 750px) {
-  .skills .content .certificates {
-    display: none;
-  }
-
-  .skills .caption .certitifications {
-    display: none;
-  }
-
-  .skills .caption .and {
-    display: none;
-  }
-
-  .skills .content .card {
-    width: 80%;
-    font-size: 15px;
-  }
+.skill-chip span {
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.skill-chip:hover {
+  background: #7daacb;
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(89, 130, 235, 0.2);
+}
+.skill-chip img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 /*----------------------------------------------- Experiences ------------------------------*/
@@ -1040,84 +937,100 @@ a {
   background: gray;
   border-radius: 20px;
 }
+/* =============================================
+       FOOTER
+    ============================================= */
+footer {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  padding: 48px 40px;
+  text-align: center;
+}
+.footer-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+.footer-links a {
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+  letter-spacing: 0.06em;
+}
+.footer-links a:hover {
+  color: var(--accent);
+}
+.footer-copy {
+  font-size: 12px;
+  color: rgba(136, 153, 187, 0.5);
+}
 
-/*------------- Animations ------------ */
-
+/* =============================================
+       ANIMATIONS
+    ============================================= */
 @keyframes letterHoverAnimation {
   0% {
     transform: scale(1.2, 0.5);
   }
-
   16% {
     transform: scale(1.2, 0.5);
   }
-
   25% {
     transform: scale(1.2, 0.5);
   }
-
   32% {
     transform: scale(0.8, 1.1);
   }
-
   48% {
     transform: scale(0.95, 1);
   }
-
   64% {
     transform: scale(0.8, 1.2);
   }
-
   80% {
     transform: scale(1.15, 1);
   }
-
   87% {
     transform: scale(1.15, 1);
   }
-
   90% {
-    /* This will add the shaking effect one time almost at the end*/
     transform: scale(0.8, 1);
   }
-
   95% {
     transform: scale(1.05, 1);
   }
-
   100% {
     transform: scale(1, 1);
   }
 }
 
-@keyframes arrowBlink {
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes show {
   0% {
-    transform: translateY(0);
+    margin-top: -90px;
   }
-
-  24% {
-    transform: translateY(0);
+  30% {
+    margin-top: -90px;
   }
-
-  34% {
-    transform: translateY(-48px);
+  36% {
+    margin-top: 0px;
   }
-
-  58% {
-    transform: translateY(-48px);
+  65% {
+    margin-top: 0px;
   }
-
-  68% {
-    transform: translateY(-96px);
+  71% {
+    margin-top: 90px;
   }
-
+  99% {
+    margin-top: 90px;
+  }
   100% {
-    transform: translateY(-96px);
+    margin-top: -90px;
   }
 }
