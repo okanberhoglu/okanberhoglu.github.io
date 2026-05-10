@@ -759,17 +759,16 @@ a {
 .proj-icon {
   font-size: 56px;
   filter: drop-shadow(0 4px 12px rgba(89, 130, 235, 0.3));
-  transition: transform 0.3s ease;
 }
+
 img.proj-icon {
   width: 100%;
   max-height: 260px;
   object-fit: cover;
   font-size: unset;
+  border-radius: 20px 20px 0 0;
 }
-.proj-card:hover .proj-icon {
-  transform: scale(1.15) translateY(-4px);
-}
+
 .proj-card-body {
   padding: 20px;
   flex-shrink: 0;
