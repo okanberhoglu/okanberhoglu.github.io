@@ -338,7 +338,7 @@ a {
   font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 300;
   color: var(--accent-light);
-  animation: show 18s ease-in-out infinite;
+  animation: show 8s ease-in-out infinite;
 }
 .home .roleContainer .roles > div {
   height: 48px;
@@ -1519,6 +1519,6 @@ footer {
     transform: translateY(-144px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-144px);
   }
 }
