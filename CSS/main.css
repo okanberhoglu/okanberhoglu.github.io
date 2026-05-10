@@ -327,7 +327,7 @@ a {
   font-size: clamp(18px, 2.2vw, 26px);
   font-weight: 300;
   color: var(--accent-light);
-  animation: show 12s ease-in-out infinite;
+  animation: show 18s ease-in-out infinite;
 }
 .home .roleContainer .roles > div {
   height: 48px;
@@ -1487,24 +1487,30 @@ footer {
 
 @keyframes show {
   0% {
-    margin-top: -90px;
+    transform: translateY(0);
   }
-  30% {
-    margin-top: -90px;
+  22% {
+    transform: translateY(0);
   }
-  36% {
-    margin-top: 0px;
+  28% {
+    transform: translateY(-48px);
   }
-  65% {
-    margin-top: 0px;
+  47% {
+    transform: translateY(-48px);
   }
-  71% {
-    margin-top: 90px;
+  53% {
+    transform: translateY(-96px);
   }
-  99% {
-    margin-top: 90px;
+  72% {
+    transform: translateY(-96px);
+  }
+  78% {
+    transform: translateY(-144px);
+  }
+  97% {
+    transform: translateY(-144px);
   }
   100% {
-    margin-top: -90px;
+    transform: translateY(0);
   }
 }
