@@ -80,18 +80,28 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .ticker-track {
-  display: inline-block;
+  display: flex;
+  width: max-content;
+  min-width: 200%;
   animation: ticker-scroll 22s linear infinite;
 }
-.ticker-track span {
+.ticker-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+  flex-shrink: 0;
+}
+.ticker-group span {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 0 64px;
+  padding: 0 clamp(24px, 4vw, 64px);
   color: #fff;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 @keyframes ticker-scroll {
   0% {
@@ -326,6 +336,12 @@ a {
 }
 .home h1.alpha {
   font-size: clamp(52px, 7vw, 90px);
+}
+.name-alias {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  margin: -8px 0 18px;
 }
 
 /* Role ticker */
