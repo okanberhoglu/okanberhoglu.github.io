@@ -753,12 +753,18 @@ a {
     transform 0.15s ease;
   will-change: transform;
   transform-origin: center center;
+  backface-visibility: hidden;
+  contain: layout paint;
+  transform: translateZ(0);
 }
 .proj-card:hover .proj-card-inner {
   border-color: rgba(89, 130, 235, 0.5);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.5),
     0 0 30px rgba(89, 130, 235, 0.15);
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 .proj-card-img-placeholder {
   flex: 1;
@@ -771,6 +777,7 @@ a {
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 .proj-icon {
   font-size: 56px;
@@ -778,11 +785,12 @@ a {
 }
 
 img.proj-icon {
+  display: block;
   width: 100%;
-  max-height: 265px;
+  height: 100%;
   object-fit: cover;
   font-size: unset;
-  border-radius: 20px 20px 0 0;
+  filter: none;
 }
 
 .proj-card-body {

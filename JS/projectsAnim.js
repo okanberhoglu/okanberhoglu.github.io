@@ -61,20 +61,30 @@ window.addEventListener("resize", updateSlider);
 /* 3D Parallax on each card */
 cards.forEach((card) => {
   const inner = card.querySelector(".proj-card-inner");
+  let rafId = null;
+  let latestEvent = null;
 
-  card.addEventListener("mousemove", (e) => {
+  function updateCardTilt(e) {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
     const y = (e.clientY - rect.top) / rect.height - 0.5;
     const rotX = -y * 10;
     const rotY = x * 10;
-    const shine = `radial-gradient(circle at ${(x + 0.5) * 100}% ${(y + 0.5) * 100}%, rgba(255,255,255,0.07) 0%, transparent 65%)`;
     inner.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
-    inner.style.backgroundImage = shine;
+    rafId = null;
+  }
+
+  card.addEventListener("mousemove", (e) => {
+    latestEvent = e;
+    if (rafId) return;
+    rafId = window.requestAnimationFrame(() => updateCardTilt(latestEvent));
   });
 
   card.addEventListener("mouseleave", () => {
+    if (rafId) {
+      window.cancelAnimationFrame(rafId);
+      rafId = null;
+    }
     inner.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
-    inner.style.backgroundImage = "none";
   });
 });
