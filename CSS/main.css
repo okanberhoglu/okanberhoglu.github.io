@@ -798,7 +798,7 @@ img.proj-icon {
   margin-bottom: 8px;
 }
 .proj-title {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 6px;
@@ -1364,6 +1364,7 @@ img.proj-icon {
   color: #aabbd4;
   line-height: 1.7;
   margin-bottom: 14px;
+  text-align: justify;
 }
 
 .exp-tags {

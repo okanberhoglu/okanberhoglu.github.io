@@ -31,9 +31,17 @@ function updateSlider() {
   clampProjectIndex();
   track.style.transform = `translateX(-${projIndex * getSlideStep()}px)`;
   dots.forEach((d, i) => d.classList.toggle("active", i === projIndex));
-  if (leftArrow) leftArrow.disabled = projIndex === 0;
-  if (rightArrow)
+
+  const needsSlider = cards.length > getVisibleCount();
+  const arrowDisplay = needsSlider ? "flex" : "none";
+  if (leftArrow) {
+    leftArrow.style.display = arrowDisplay;
+    leftArrow.disabled = projIndex === 0;
+  }
+  if (rightArrow) {
+    rightArrow.style.display = arrowDisplay;
     rightArrow.disabled = projIndex >= cards.length - getVisibleCount();
+  }
 }
 
 window.slideProjects = function (dir) {
