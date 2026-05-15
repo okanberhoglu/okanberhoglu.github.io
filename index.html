@@ -201,16 +201,60 @@
         <span></span><span></span><span></span>
       </div>
     </div>
-    <div class="menu">
-      <ul>
-        <li onclick="menuOpen()"><a href="#home">Home</a></li>
-        <li onclick="menuOpen()"><a href="#aboutMe">About Me</a></li>
-        <li onclick="menuOpen()"><a href="#skills">Skills</a></li>
-        <li onclick="menuOpen()"><a href="#projects">Projects</a></li>
-        <li onclick="menuOpen()"><a href="#education">Education</a></li>
-        <li onclick="menuOpen()"><a href="#experiences">Experience</a></li>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a class="desktop-nav-brand" href="#home">
+        <span class="brand-mark">OB</span>
+        <span class="brand-name">Okan Berhoğlu</span>
+      </a>
+      <ul class="desktop-nav-links">
+        <li><a href="#home" class="desktop-nav-link">Home</a></li>
+        <li><a href="#aboutMe" class="desktop-nav-link">About</a></li>
+        <li><a href="#skills" class="desktop-nav-link">Skills</a></li>
+        <li><a href="#projects" class="desktop-nav-link">Projects</a></li>
+        <li><a href="#education" class="desktop-nav-link">Education</a></li>
+        <li><a href="#experiences" class="desktop-nav-link">Experience</a></li>
       </ul>
-    </div>
+      <a href="mailto:okanberh@gmail.com" class="desktop-nav-cta">Contact</a>
+    </nav>
+    <aside class="menu" aria-label="Mobile navigation">
+      <div class="menu-header">
+        <span class="menu-eyebrow">Menu</span>
+        <span class="menu-title">Okan Berhoğlu</span>
+      </div>
+      <ul class="menu-list">
+        <li onclick="menuOpen()" style="--i:1">
+          <a href="#home"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">→</span></a>
+        </li>
+        <li onclick="menuOpen()" style="--i:2">
+          <a href="#aboutMe"><span class="menu-num">02</span><span class="menu-text">About Me</span><span class="menu-arrow">→</span></a>
+        </li>
+        <li onclick="menuOpen()" style="--i:3">
+          <a href="#skills"><span class="menu-num">03</span><span class="menu-text">Skills</span><span class="menu-arrow">→</span></a>
+        </li>
+        <li onclick="menuOpen()" style="--i:4">
+          <a href="#projects"><span class="menu-num">04</span><span class="menu-text">Projects</span><span class="menu-arrow">→</span></a>
+        </li>
+        <li onclick="menuOpen()" style="--i:5">
+          <a href="#education"><span class="menu-num">05</span><span class="menu-text">Education</span><span class="menu-arrow">→</span></a>
+        </li>
+        <li onclick="menuOpen()" style="--i:6">
+          <a href="#experiences"><span class="menu-num">06</span><span class="menu-text">Experience</span><span class="menu-arrow">→</span></a>
+        </li>
+      </ul>
+      <div class="menu-footer">
+        <a class="menu-contact" href="mailto:okanberh@gmail.com">
+          <img src="./assets/MailIcon.png" alt=""/>
+          <span>okanberh@gmail.com</span>
+        </a>
+        <a class="menu-contact" href="tel:+905350637001">
+          <img src="./assets/PhoneIcon.png" alt=""/>
+          <span>+90 535 063 70 01</span>
+        </a>
+        <a href="./assets/Resume_OkanBerhoglu.pdf" target="_blank" rel="noopener" class="menu-cta">
+          Get Resume
+        </a>
+      </div>
+    </aside>
     <section id="home">
       <canvas id="blobCanvas"></canvas>
       <canvas id="canvas"></canvas>
@@ -617,6 +661,7 @@
     <script src="./JS/letterHover.js"></script>
     <script src="./JS/reveal.js"></script>
     <script src="./JS/menuOpen.js"></script>
+    <script src="./JS/desktopNav.js"></script>
     <script src="./JS/projectsAnim.js"></script>
     <script type="module" src="./JS/threeMain.js"></script>
   </body>
