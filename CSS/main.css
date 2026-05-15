@@ -17,6 +17,12 @@ body {
   color: #e7f6f2;
   overflow-x: hidden;
 }
+body.menu-scroll-locked {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
 a {
   text-decoration: none;
   color: inherit;
