@@ -125,9 +125,16 @@ a {
   display: none;
   position: fixed;
   top: var(--ticker-h);
+  left: 0;
   right: 0;
   z-index: 99;
   padding: 10px 18px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(10, 15, 30, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
 }
 .navbar .hamburger {
   width: 36px;
@@ -159,7 +166,7 @@ a {
 }
 @media (max-width: 965px) {
   .navbar {
-    display: block;
+    display: flex;
   }
 }
 
@@ -171,8 +178,16 @@ a {
   width: min(380px, 88vw);
   height: calc(100vh - var(--ticker-h));
   background:
-    radial-gradient(120% 60% at 100% 0%, rgba(89, 130, 235, 0.18) 0%, transparent 60%),
-    radial-gradient(80% 40% at 0% 100%, rgba(89, 130, 235, 0.12) 0%, transparent 60%),
+    radial-gradient(
+      120% 60% at 100% 0%,
+      rgba(89, 130, 235, 0.18) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      80% 40% at 0% 100%,
+      rgba(89, 130, 235, 0.12) 0%,
+      transparent 60%
+    ),
     rgba(10, 15, 30, 0.96);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
@@ -340,6 +355,36 @@ a {
   transform: translateY(-1px);
   box-shadow: 0 10px 26px var(--accent-glow);
 }
+.menu-social {
+  display: flex;
+  gap: 8px;
+}
+.menu-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+.menu-social-btn:hover {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+}
+.menu-social-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.menu-social-btn img.linkedin_img {
+  filter: none;
+}
 
 @media (max-width: 965px) {
   .menu {
@@ -388,16 +433,7 @@ a {
 .desktop-nav-brand .brand-mark {
   width: 32px;
   height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #3a5fd9 0%, #5982eb 100%);
-  color: #fff;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 14px var(--accent-glow);
+  object-fit: contain;
 }
 .desktop-nav-brand .brand-name {
   font-size: 15px;
@@ -437,8 +473,30 @@ a {
 }
 .desktop-nav-link.active {
   color: #fff;
-  background: linear-gradient(135deg, rgba(89, 130, 235, 0.9) 0%, rgba(58, 95, 217, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(89, 130, 235, 0.9) 0%,
+    rgba(58, 95, 217, 0.9) 100%
+  );
   box-shadow: 0 4px 16px var(--accent-glow);
+}
+.desktop-nav-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.desktop-nav-cta img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+.desktop-nav-cta img.linkedin_img {
+  filter: none;
+}
+
+.desktop-nav-cta .linkedin_img {
+  width: 18px;
+  height: 18px;
 }
 .desktop-nav-cta {
   display: inline-flex;

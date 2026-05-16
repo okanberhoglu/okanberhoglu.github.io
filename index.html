@@ -32,6 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="./assets/ob_log.png" type="image/png" />
     <link rel="stylesheet" href="CSS/main.css" />
     <title>Okan Berhoglu | Robotics & Software Engineer</title>
     <script type="application/ld+json">
@@ -197,14 +198,16 @@
       </div>
     </div>
     <div class="navbar">
+      <a class="desktop-nav-brand" href="#home">
+        <img class="brand-mark" src="./assets/ob_log.png" alt="OB">
+      </a>
       <div class="hamburger" onclick="menuOpen()">
         <span></span><span></span><span></span>
       </div>
     </div>
     <nav class="desktop-nav" aria-label="Primary">
       <a class="desktop-nav-brand" href="#home">
-        <span class="brand-mark">OB</span>
-        <span class="brand-name">Okan Berhoğlu</span>
+        <img class="brand-mark" src="./assets/ob_log.png" alt="OB">
       </a>
       <ul class="desktop-nav-links">
         <li><a href="#home" class="desktop-nav-link">Home</a></li>
@@ -214,13 +217,23 @@
         <li><a href="#education" class="desktop-nav-link">Education</a></li>
         <li><a href="#experiences" class="desktop-nav-link">Experience</a></li>
       </ul>
-      <a href="mailto:okanberh@gmail.com" class="desktop-nav-cta">Contact</a>
+      <div class="desktop-nav-cta-group">
+        <a href="https://www.linkedin.com/in/okan-berhoğlu-1073601a3/" class="desktop-nav-cta">
+          <img class="linkedin_img" src="./assets/linkedin_logo.png" alt="Linkedin">
+        </a>
+        <a href="https://github.com/okanberhoglu" class="desktop-nav-cta">
+          <img src="./assets/github_log.png" alt="Github">
+        </a>
+        <a href="mailto:okanberh@gmail.com" class="desktop-nav-cta">
+          <img src="./assets/MailIcon.png" alt="Mail">
+        </a>
+      </div>
     </nav>
     <aside class="menu" aria-label="Mobile navigation">
-      <div class="menu-header">
+      <!-- <div class="menu-header">
         <span class="menu-eyebrow">Menu</span>
         <span class="menu-title">Okan Berhoğlu</span>
-      </div>
+      </div> -->
       <ul class="menu-list">
         <li style="--i:1">
           <a href="#home"><span class="menu-num">01</span><span class="menu-text">Home</span><span class="menu-arrow">→</span></a>
@@ -242,14 +255,17 @@
         </li>
       </ul>
       <div class="menu-footer">
-        <a class="menu-contact" href="mailto:okanberh@gmail.com">
-          <img src="./assets/MailIcon.png" alt=""/>
-          <span>okanberh@gmail.com</span>
-        </a>
-        <a class="menu-contact" href="tel:+905350637001">
-          <img src="./assets/PhoneIcon.png" alt=""/>
-          <span>+90 535 063 70 01</span>
-        </a>
+        <div class="menu-social">
+          <a class="menu-social-btn" href="https://www.linkedin.com/in/okan-berhoğlu-1073601a3/">
+            <img class="linkedin_img" src="./assets/linkedin_logo.png" alt="LinkedIn">
+          </a>
+          <a class="menu-social-btn" href="https://github.com/okanberhoglu">
+            <img src="./assets/github_log.png" alt="Github">
+          </a>
+          <a class="menu-social-btn" href="mailto:okanberh@gmail.com">
+            <img src="./assets/MailIcon.png" alt="Mail">
+          </a>
+        </div>
         <a href="./assets/OkanBerhoglu_CV.pdf" target="_blank" rel="noopener" class="menu-cta">
           Get Resume
         </a>
