@@ -8,8 +8,8 @@
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const lenis = new Lenis({
-    lerp: 0.14, 
-    wheelMultiplier: 1.15,
+    lerp: 0.1, 
+    wheelMultiplier: 1,
     smoothWheel: true,
     syncTouch: false,
   });
@@ -33,7 +33,7 @@
     if (!target) return;
 
     event.preventDefault();
-    lenis.scrollTo(target, { duration: 0.8 });
+    lenis.scrollTo(target, { duration: 1 });
     history.pushState(null, "", hash);
   });
 })();
