@@ -11,9 +11,18 @@ function lockBodyScroll() {
   scrollPosition = window.scrollY;
   document.body.style.top = `-${scrollPosition}px`;
   document.body.classList.add("menu-scroll-locked");
+  if (window.lenis) window.lenis.stop();
 }
 
 function jumpToScrollPosition(position) {
+  if (window.lenis) {
+    window.lenis.start();
+    // Page height was measured while the body was locked; re-measure first.
+    window.lenis.resize();
+    window.lenis.scrollTo(position, { immediate: true, force: true });
+    return;
+  }
+
   const originalScrollBehavior = document.documentElement.style.scrollBehavior;
 
   document.documentElement.style.scrollBehavior = "auto";
